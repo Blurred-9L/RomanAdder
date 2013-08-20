@@ -48,7 +48,7 @@ string RomanAdder::add(){
     
     normalizeAddend( _addend1, _addend1 );
     normalizeAddend( _addend2, _addend2 );
-    cout << _addend1 << " " << _addend2 << endl;
+    // cout << _addend1 << " " << _addend2 << endl;
     memset( symbolCounter, 0, sizeof( int ) * LETTERS );
     countSymbols( _addend1 );
     countSymbols( _addend2 );
@@ -146,14 +146,10 @@ char RomanAdder::getLetter( int value ){
 
 void RomanAdder::appendLetters( int value, int nextValue, string& addend ){
     char letter = 0;
-    int times;
+    int times = 4;
     
     if( nextValue == value * 10 ){
-        times = 3;
         letter = getLetter( value * 5 );
-    }
-    else{
-        times = 4;
     }
     
     if( letter ){
@@ -197,7 +193,7 @@ void RomanAdder::countSymbols( const string& addend ){
 }
 
 void RomanAdder::simplify( int symbolCounter[] ){
-    char letterOrder[] = {'I', 'V', 'X', 'L', 'C', 'D' };
+    char letterOrder[] = {'I', 'V', 'X', 'L', 'C', 'D', 'M' };
     int size = 6;
     int i, value;
     int index;

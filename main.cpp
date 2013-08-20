@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(){
-    RomanAdder r( "CMXCIX", "I" );
+    RomanAdder r( "MD", "CDXLIV" );
     
     cout << r.add() << endl;
     
